@@ -186,6 +186,19 @@ namespace BowlingGame.Tests
             game.AddRoll(2);
             Assert.Equal(250, game.TotalScore);
         }
+
+        [Fact]
+        public void GameScore_ResetScore()
+        {
+            game.AddRoll(2);
+            game.AddRoll(2);
+            game.AddRoll(2);
+            game.AddRoll(2);
+
+            game.NewGame();
+
+            Assert.Equal(0, game.TotalScore);
+        }
     }
 }
 

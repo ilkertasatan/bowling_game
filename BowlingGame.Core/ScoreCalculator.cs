@@ -1,4 +1,5 @@
-﻿using BowlingGame.Core.Abstractions;
+﻿using System;
+using BowlingGame.Core.Abstractions;
 
 namespace BowlingGame.Core
 {
@@ -40,6 +41,14 @@ namespace BowlingGame.Core
             }
 
             return total;
+        }
+
+        public void ResetScore()
+        {
+            for (var i = 0; i < rolls.Length; i++)
+            {
+                rolls[i] = 0;
+            }
         }
 
         private bool IsStrike => rolls[currentIndex] == 10;

@@ -13,7 +13,7 @@ namespace BowlingGame.Core
 
         public void NewGame()
         {
-            
+            scoreCalculator.ResetScore();
         }
 
         public void AddRoll(int pins)

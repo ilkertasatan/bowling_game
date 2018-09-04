@@ -4,5 +4,6 @@
     {
         void AddRoll(IBallThrow ballThrow);
         int FrameScore(int frameIndex);
+        void ResetScore();
     }
 }
